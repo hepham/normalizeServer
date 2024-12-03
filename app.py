@@ -25,5 +25,7 @@ with app.app_context():
 
 if __name__ == '__main__':
     from controllers.assignment_controller import assignment_bp
+    from controllers.progress_controller import progress_bp
     app.register_blueprint(assignment_bp, url_prefix='/assignments')
+    app.register_blueprint(progress_bp, url_prefix='/progressProofRead')
     app.run(debug=True)
